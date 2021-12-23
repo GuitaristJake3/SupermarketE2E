@@ -16,46 +16,46 @@ To start with a 3-Tier Architecture
 https://fluffy.es/introduction-to-client-server/
 
 ## Process
-https://www.scrum.org/resources/what-is-scrum
+- https://www.scrum.org/resources/what-is-scrum
 
 ## Frontend 
-https://docs.npmjs.com/about-npm
-https://vitejs.dev/
-https://kit.svelte.dev/
-https://svelte.dev/tutorial/basics
-https://tailwindcss.com/
-https://www.typescriptlang.org/
+- https://docs.npmjs.com/about-npm
+- https://vitejs.dev/
+- https://kit.svelte.dev/
+- https://svelte.dev/tutorial/basics
+- https://tailwindcss.com/
+- https://www.typescriptlang.org/
 
 ## Backend
-https://docs.microsoft.com/en-us/nuget/what-is-nuget
-https://docs.microsoft.com/en-us/aspnet/core/tutorials/min-web-api?view=aspnetcore-6.0&tabs=visual-studio
-https://docs.microsoft.com/en-us/dotnet/csharp/linq/
-https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-6.0
+- https://docs.microsoft.com/en-us/nuget/what-is-nuget
+- https://docs.microsoft.com/en-us/aspnet/core/tutorials/min-web-api?view=aspnetcore-6.0&tabs=visual-studio
+- https://docs.microsoft.com/en-us/dotnet/csharp/linq/
+- https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-6.0
 
 ## Database
-https://www.w3schools.com/sql/
-https://docs.microsoft.com/en-us/ef/core/
+- https://www.w3schools.com/sql/
+- https://docs.microsoft.com/en-us/ef/core/
 
 ## Testing
-https://xunit.net/
-https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test
-https://docs.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-6.0
+- https://xunit.net/
+- https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test
+- https://docs.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-6.0
 
 ## Infrastructure (How we will run all the apps)
-https://www.freecodecamp.org/news/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b/
-https://docs.docker.com/
-https://docs.docker.com/compose/
-https://aws.amazon.com/docker/
-https://blog.devmountain.com/git-vs-github-whats-the-difference/
-https://git-scm.com/videos
-https://editorconfig.org/ (Using config taken from microsofts compiler repository https://github.com/dotnet/roslyn)
+- https://www.freecodecamp.org/news/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b/
+- https://docs.docker.com/
+- https://docs.docker.com/compose/
+- https://aws.amazon.com/docker/
+- https://blog.devmountain.com/git-vs-github-whats-the-difference/
+- https://git-scm.com/videos
+- https://editorconfig.org/ (Using config taken from microsofts compiler repository https://github.com/dotnet/roslyn)
 
 ## Documentation
-https://www.markdownguide.org/getting-started/
-https://plantuml.com/class-diagram
-https://dotnet.github.io/docfx/
+- https://www.markdownguide.org/getting-started/
+- https://plantuml.com/class-diagram
+- https://dotnet.github.io/docfx/
 
 ## Clean code
-https://refactoring.guru/
-http://blog.cleancoder.com/
-https://cleancoders.com/library/all (not free)
+- https://refactoring.guru/
+- http://blog.cleancoder.com/
+- https://cleancoders.com/library/all (not free)
