@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  be-customerstore:
+    build:
+      context: .
+      dockerfile: BE-CustomerStore/Dockerfile
+  fe-customerstore:
+    build:
+      context: .
+      dockerfile: FE-CustomerStore/Dockerfile
