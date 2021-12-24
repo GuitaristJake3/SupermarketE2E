@@ -21,7 +21,6 @@ https://fluffy.es/introduction-to-client-server/
 ## Frontend 
 - https://docs.npmjs.com/about-npm
 - https://vitejs.dev/
-- https://kit.svelte.dev/
 - https://svelte.dev/tutorial/basics
 - https://tailwindcss.com/
 - https://www.typescriptlang.org/
