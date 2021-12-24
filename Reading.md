@@ -20,8 +20,10 @@ https://fluffy.es/introduction-to-client-server/
 
 ## Frontend 
 - https://docs.npmjs.com/about-npm
-- https://vitejs.dev/
-- https://svelte.dev/tutorial/basics
+- https://reactjs.org/
+- https://react-redux.js.org/introduction/getting-started
+- https://redux-toolkit.js.org/
+- https://v5.reactrouter.com/web/guides/quick-start
 - https://tailwindcss.com/
 - https://www.typescriptlang.org/
 
