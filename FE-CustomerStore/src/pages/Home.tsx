@@ -4,7 +4,8 @@ export default function Home()
 {
     const [items, setItems] = useState<string[]>([]);
     useEffect(() => {
-        fetch("http://localhost:8081/WeatherForecast")
+        console.log(JSON.stringify(import.meta.env));
+        fetch(import.meta.env.VITE_API_URL + "/WeatherForecast")
         .then(response => response.json())
         .then(data => setItems(data.map((d: { summary: any; }) => d.summary)));
     }, []);

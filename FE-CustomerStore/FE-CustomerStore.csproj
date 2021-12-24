@@ -7,6 +7,11 @@
     <EmbeddedResource Remove="node_modules\**" />
     <None Remove="node_modules\**" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.dockerignore" Link=".dockerignore">
+      <DependentUpon>$(DockerDefaultDockerfile)</DependentUpon>
+    </None>
+  </ItemGroup>
 
   <!-- A temporary solution, import C# Visual Studio design time targets in order to be able to load the project in Visual Studio -->
   <PropertyGroup>

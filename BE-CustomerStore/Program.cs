@@ -7,7 +7,7 @@ builder.Logging.AddSimpleConsole(options =>
     options.TimestampFormat = "hh:mm:ss ";
 });
 
-// Add services to the container.
+// Add services to the container.s
 
 builder.Services.AddCors(options =>
 {

@@ -10,3 +10,9 @@ services:
       - ASPNETCORE_URLS=http://+:80
     ports:
       - "8081:80"
+  fe-customerstore:
+    build:
+      context: .
+      dockerfile: FE-CustomerStore/Dockerfile
+    ports:
+      - "8080:80"
