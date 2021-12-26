@@ -2,18 +2,45 @@
 > Couldnt find a good code first project management solution and wanted everything in the repo so here we are
 
 #### Initial Epics/Ideas
+- Migrate Markdown to DocFx
+  - [ ] Create docfx project
+  - [ ] Move markdown into it
 - Epos
+    - Till
+    - Self service
 - Online Ordering
   - [ ] Catalog
     - [ ] Categories
+    - [ ] Tags
+    - [ ] Search
+    - [ ] Offers (BOGOF, 2 for £x ETC)
+    - [ ] Promotions
   - [ ] Cart
-  - [ ] Promotions 
+    - [ ] Amounts
+    - [ ] Delete
+    - [ ] Save in session
+    - [ ] Save to account
+  - [ ] Promotions
 - Stock Management
-- Reporting
-- Email
+  - Add new item
+  - Price
+  - Price by weight/unit
+- Reporting (and BI)
+  - Which products are selling
 - Deployment
+  - To Azure
+  - Github Actions
+  - Kubernetes
 - Back Office
+  - Employee management
+- Regular orders
+  - Email
 - Simulated Ordering/Shipping
-- Monitoring (and BI)
+- Monitoring
+  - Logging of actions
+  - Performance metrics
+  - Health checks
 - Identity
   - [ ] Login
+- Mobile App?
+  - MAUI
