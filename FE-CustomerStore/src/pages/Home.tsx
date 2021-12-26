@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
 
+interface Product {
+    name: string;
+    price: string;
+}
+
 export default function Home()
 {
     const [items, setItems] = useState<string[]>([]);
     useEffect(() => {
-        console.log(JSON.stringify(import.meta.env));
-        fetch(import.meta.env.VITE_API_URL + "/WeatherForecast")
+        fetch(import.meta.env.VITE_API_URL + "/api/products")
         .then(response => response.json())
-        .then(data => setItems(data.map((d: { summary: any; }) => d.summary)));
+        .then(data => setItems(data.map((product: Product) => product.name + ": " + product.price)));
     }, []);
 
     const listItems = items.map((sum, i) =>

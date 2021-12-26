@@ -1,4 +1,6 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using BE_CustomerStore.Data;
+
+var builder = WebApplication.CreateBuilder(args);
 
 builder.Logging.AddSimpleConsole(options =>
 {
@@ -18,6 +20,7 @@ builder.Services.AddCors(options =>
         policy.AllowAnyMethod();
     });
 });
+builder.Services.AddSingleton(typeof(IStore<>), typeof(MemoryStore<>));
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
