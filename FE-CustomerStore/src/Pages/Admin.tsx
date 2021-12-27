@@ -1,23 +1,12 @@
 import { useState } from "react";
+import { useCreateItemMutation } from "../Items/ItemApi";
 
 export default function Admin()
 {
     const [name, setName] = useState<string>("");
     const [price, setPrice] = useState<string>("");
 
-    function addItem()
-    {
-        fetch(import.meta.env.VITE_API_URL + "/api/products", {
-            method: 'POST',
-            headers: {
-              'content-type': 'application/json;charset=UTF-8',
-            },
-            body: JSON.stringify({
-              name,
-              price,
-            }),
-        });
-    }
+    const [createItem] = useCreateItemMutation();
 
     return (
         <>
@@ -32,7 +21,7 @@ export default function Admin()
                     <span className="label-text">Price</span>
                 </label> 
                 <input placeholder="price" className="input input-bordered" type="text" value={price} onChange={e => setPrice(e.target.value)}/>
-                <button className="btn btn-primary mt-4" onClick={addItem}>Add Item</button>
+                <button className="btn btn-primary mt-4" onClick={() => createItem({name, price})}>Add Item</button>
             </div>
         </>
     );

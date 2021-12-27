@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Admin from "./pages/Admin";
-import Home from "./pages/Home";
+import Navbar from "../Components/Navbar";
+import Admin from "../Pages/Admin";
+import Home from "../Pages/Home";
 
 function App() {
   return (
