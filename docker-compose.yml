@@ -8,11 +8,26 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__Db=Server=db;Database=customerstore;User=sa;Password=Pass@Word1!;
     ports:
       - "8081:80"
+    depends_on:
+      - db
   fe-customerstore:
     build:
       context: .
       dockerfile: FE-CustomerStore/Dockerfile
     ports:
       - "8080:80"
+  db:
+    user: root
+    image: "mcr.microsoft.com/mssql/server"
+    environment:
+        SA_PASSWORD: "Pass@Word1!"
+        ACCEPT_EULA: "Y"
+    volumes:
+      - sqlvolume:/var/opt/mssql
+    ports:
+      - "1433:1433"
+volumes:
+  sqlvolume:

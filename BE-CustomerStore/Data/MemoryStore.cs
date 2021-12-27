@@ -1,19 +1,7 @@
 ﻿namespace BE_CustomerStore.Data
 {
-    public interface IEntity
-    {
-        Guid Id { get; set; }
-    }
-
-    public interface IStore<T>
-        where T : IEntity
-    {
-        Task<IEnumerable<T>> Get();
-        Task<Guid> Add(T newItem);
-    }
-
     public class MemoryStore<T> : IStore<T>
-        where T : IEntity
+        where T : class, IEntity
     {
         private readonly Dictionary<Guid, T> _data;
 

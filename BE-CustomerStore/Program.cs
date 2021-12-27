@@ -1,4 +1,5 @@
 ﻿using BE_CustomerStore.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,7 +21,12 @@ builder.Services.AddCors(options =>
         policy.AllowAnyMethod();
     });
 });
-builder.Services.AddSingleton(typeof(IStore<>), typeof(MemoryStore<>));
+//builder.Services.AddSingleton(typeof(IStore<>), typeof(MemoryStore<>));
+builder.Services.AddDbContext<DatabaseContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Db"));
+});
+builder.Services.AddScoped(typeof(IStore<>), typeof(DbStore<>));
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

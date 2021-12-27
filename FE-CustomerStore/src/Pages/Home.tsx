@@ -12,7 +12,7 @@ export default function Home()
 
 
     const listItems = data?.map((sum, i) =>
-        <li className="m-4 bg-neutral text-white p-8" key={i}>{sum.name}</li>
+        <li className="m-4 bg-neutral text-white p-8" key={i}>{sum.name}: {sum.price}</li>
     );
 
     return (
