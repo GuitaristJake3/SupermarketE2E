@@ -26,6 +26,7 @@ https://fluffy.es/introduction-to-client-server/
 - https://v5.reactrouter.com/web/guides/quick-start
 - https://tailwindcss.com/
 - https://www.typescriptlang.org/
+- https://daisyui.com/
 
 ## Backend
 - https://docs.microsoft.com/en-us/nuget/what-is-nuget
