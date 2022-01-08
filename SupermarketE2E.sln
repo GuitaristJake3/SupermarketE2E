@@ -19,8 +19,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BE-CustomerStore", "BE-Cust
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomerStore", "CustomerStore", "{E1AA7222-790F-4BB6-A474-FE69BC13BECE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testacles", "testacles\testacles.csproj", "{5BF69254-936B-4C5A-ACBB-2AC60159BB06}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,10 +29,6 @@ Global
 		{662FC4A0-4B18-4C77-9D22-30E217B1A35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{662FC4A0-4B18-4C77-9D22-30E217B1A35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{662FC4A0-4B18-4C77-9D22-30E217B1A35C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5BF69254-936B-4C5A-ACBB-2AC60159BB06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5BF69254-936B-4C5A-ACBB-2AC60159BB06}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5BF69254-936B-4C5A-ACBB-2AC60159BB06}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5BF69254-936B-4C5A-ACBB-2AC60159BB06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

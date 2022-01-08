@@ -1,5 +1,5 @@
 ﻿using BE_CustomerStore.Data;
-using BE_CustomerStore.Products;
+using BE_CustomerStore.Modelling;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BE_CustomerStore.Controllers
