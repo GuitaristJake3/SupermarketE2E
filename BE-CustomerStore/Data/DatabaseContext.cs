@@ -1,4 +1,4 @@
-﻿using BE_CustomerStore.Products;
+﻿using BE_CustomerStore.Modelling;
 using Microsoft.EntityFrameworkCore;
 
 namespace BE_CustomerStore.Data
@@ -12,5 +12,25 @@ namespace BE_CustomerStore.Data
         }
 
         public DbSet<Product> Products { get; internal set; }
+        public DbSet<Order> Orders { get; internal set; }
+        public DbSet<ProductOrder> ProductOrders { get; internal set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Product>()
+                .HasMany(p => p.Orders)
+                .WithMany(o => o.Products)
+                .UsingEntity<ProductOrder>();
+
+            modelBuilder.Entity<Product>()
+                .Property(o => o.Price)
+                .HasColumnType("smallmoney");
+
+            modelBuilder.Entity<ProductOrder>()
+                .Property(o => o.Amount)
+                .HasColumnType("decimal");
+        }
     }
 }

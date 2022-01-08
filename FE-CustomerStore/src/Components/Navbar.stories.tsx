@@ -7,6 +7,11 @@ export default {
     component: Navbar
 } as ComponentMeta<typeof Navbar>;
 
-const Template: ComponentStory<typeof Navbar> = () => <BrowserRouter><Navbar /></BrowserRouter>;
+const Template: ComponentStory<typeof Navbar> = (props) => <BrowserRouter><Navbar {...props} /></BrowserRouter>;
 
 export const Primary = Template.bind({});
+Primary.args = {
+    links: [
+        { url: "/test", display: "Test"}
+    ]
+}

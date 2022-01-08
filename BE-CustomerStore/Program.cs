@@ -21,6 +21,8 @@ builder.Services.AddCors(options =>
         policy.AllowAnyMethod();
     });
 });
+
+
 //builder.Services.AddSingleton(typeof(IStore<>), typeof(MemoryStore<>));
 builder.Services.AddDbContext<DatabaseContext>(options =>
 {

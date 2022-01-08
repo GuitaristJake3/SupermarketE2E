@@ -1,21 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+interface NavbarProps
+{
+    links: NavBarLink[];
+}
+
+export interface NavBarLink
+{
+    url: string;
+    display:string;
+}
+
+function Navbar(props: NavbarProps) {
+
+    let links = props.links.map((l, index) => 
+        <Link to={l.url} key={index}>
+            <span className="btn btn-ghost btn-sm rounded-btn">
+                {l.display}
+            </span>
+        </Link>
+    );
+
     return (
         <div className="navbar mb-2 shadow-lg bg-neutral text-neutral-content">
             <div className="flex-1 px-2 mx-2">
                 <div className="items-stretch">
-                    <Link to="/">
-                        <span className="btn btn-ghost btn-sm rounded-btn">
-                            View Catalog
-                        </span>
-                    </Link>
-                    <Link to="/admin">
-                        <span className="btn btn-ghost btn-sm rounded-btn">
-                            Admin
-                        </span>
-                    </Link>
+                    {links}
                 </div>
             </div>
         </div>
