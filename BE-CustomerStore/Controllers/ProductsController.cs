@@ -1,5 +1,6 @@
 ﻿using BE_CustomerStore.Data;
 using BE_CustomerStore.Modelling;
+using BE_CustomerStore.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BE_CustomerStore.Controllers
@@ -18,15 +19,14 @@ namespace BE_CustomerStore.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            return Ok(await _productStore.Get());
+            var products = await _productStore.Get();
+            return base.Ok(products.Select(p => new ProductVM(p)));
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add([FromBody] Product product)
+        public async Task<IActionResult> Add([FromBody] ProductVM product)
         {
-            product.Id = Guid.Empty;
-
-            var id = await _productStore.Add(product);
+            var id = await _productStore.Add(product.ToDb());
 
             return Ok(id);
         }

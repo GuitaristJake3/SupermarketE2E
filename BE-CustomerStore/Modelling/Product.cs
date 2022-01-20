@@ -8,7 +8,7 @@ namespace BE_CustomerStore.Modelling
         public string Name { get; set; }
         public decimal Price { get; set; }
         public PriceUnit Unit { get; set; }
-        public string Descriptiom { get; set; }
+        public string Description { get; set; }
         public Uri ImageUrl { get; set; }
         public string Barcode { get; set; }
 

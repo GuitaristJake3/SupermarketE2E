@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useGetItemsQuery } from "../Items/ItemApi";
+import { useGetProductsQuery } from "../Products/ProductApi";
 
 interface Product {
     name: string;
@@ -8,7 +8,7 @@ interface Product {
 
 export default function Home()
 {
-    const { data } = useGetItemsQuery();
+    const { data } = useGetProductsQuery();
 
 
     const listItems = data?.map((sum, i) =>

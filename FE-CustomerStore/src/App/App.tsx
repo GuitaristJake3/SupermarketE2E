@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Categories from "../Categories/Categories";
 import Navbar, { NavBarLink } from "../Components/Navbar";
-import Admin from "../Pages/Admin";
 import Home from "../Pages/Home";
 import Footer from "./Footer";
 
@@ -11,8 +11,7 @@ var topNav: NavBarLink[] = [
 ];
 
 var middleNav: NavBarLink[] = [
-  { url: '/', display: 'Store' },
-  { url: '/admin', display: 'Admin' },
+  { url: '/', display: 'Store' }
 ];
 
 function App() {
@@ -29,10 +28,10 @@ function App() {
       </div>
       <div className="w-full flex flex-row items-stretch">
         <div className="flex-none w-1/5">
+          <Categories />
         </div>
         <div className="grow">
           <Routes>
-            <Route path="/admin" element={ <Admin /> } />
             <Route path="/" element={ <Home /> } />
           </Routes>
         </div>

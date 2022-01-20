@@ -11,9 +11,10 @@ namespace BE_CustomerStore.Data
 
         }
 
-        public DbSet<Product> Products { get; internal set; }
-        public DbSet<Order> Orders { get; internal set; }
-        public DbSet<ProductOrder> ProductOrders { get; internal set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<ProductOrder> ProductOrders { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
