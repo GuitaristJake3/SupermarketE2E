@@ -4,6 +4,7 @@
         where T : class, IEntity
     {
         Task<IEnumerable<T>> Get();
+        Task<IEnumerable<T>> Get(IQuery<T> query);
         Task<Guid> Add(T newItem);
     }
 }

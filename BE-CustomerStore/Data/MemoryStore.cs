@@ -21,5 +21,10 @@
         {
             return Task.FromResult(_data.Values.AsEnumerable());
         }
+
+        public Task<IEnumerable<T>> Get(IQuery<T> query)
+        {
+            return Task.FromResult(query.Specify(_data.Values.AsQueryable()).AsEnumerable());
+        }
     }
 }

@@ -26,16 +26,9 @@ function App() {
       <div className="w-full">
         <Navbar links={middleNav}/>
       </div>
-      <div className="w-full flex flex-row items-stretch">
-        <div className="flex-none w-1/5">
-          <Categories />
-        </div>
-        <div className="grow">
-          <Routes>
-            <Route path="/" element={ <Home /> } />
-          </Routes>
-        </div>
-      </div>
+      <Routes>
+        <Route path="/" element={ <Home /> } />
+      </Routes>
       <div className="w-full">
         <Footer />
       </div>

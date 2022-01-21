@@ -1,27 +1,29 @@
 import { useEffect, useState } from "react";
+import Categories from "../Categories/Categories";
 import { useGetProductsQuery } from "../Products/ProductApi";
 
-interface Product {
-    name: string;
-    price: string;
-}
-
-export default function Home()
-{
-    const { data } = useGetProductsQuery();
-
+export default function Home() {
+    const [category, setCategory] = useState<string | undefined>('');
+    const { data } = useGetProductsQuery(category);
 
     const listItems = data?.map((sum, i) =>
-        <li className="m-4 bg-neutral text-white p-8" key={i}>{sum.name}: {sum.price}</li>
+        <li className="bg-neutral text-white p-8" key={i}>{sum.name}: {sum.price}</li>
     );
 
     return (
-        <>
-        {data && 
-            <ul>
-                {listItems}
-            </ul>
-        }
-        </>
+        <div className="w-full flex flex-row items-stretch">
+            <div className="flex-none w-1/5 mb-4">
+                <Categories onChange={id => setCategory(id)}/>
+            </div>
+            <div className="grow">
+                <ul className="m-4">
+                    {data &&
+                        <>
+                            {listItems}
+                        </>  
+                    }
+                </ul>
+            </div>
+        </div>
     );
 }

@@ -24,5 +24,10 @@ namespace BE_CustomerStore.Data
         {
             return await _context.Set<T>().ToListAsync();
         }
+
+        public async Task<IEnumerable<T>> Get(IQuery<T> query)
+        {
+            return await query.Specify(_context.Set<T>()).ToListAsync();
+        }
     }
 }

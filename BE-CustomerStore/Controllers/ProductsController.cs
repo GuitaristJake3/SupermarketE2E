@@ -1,5 +1,6 @@
 ﻿using BE_CustomerStore.Data;
 using BE_CustomerStore.Modelling;
+using BE_CustomerStore.Queries;
 using BE_CustomerStore.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,9 +18,10 @@ namespace BE_CustomerStore.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index([FromQuery] Guid? category)
         {
-            var products = await _productStore.Get();
+            var query = new GetProductsQuery(category);
+            var products = await _productStore.Get(query);
             return base.Ok(products.Select(p => new ProductVM(p)));
         }
 
